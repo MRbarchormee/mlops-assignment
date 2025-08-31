@@ -22,8 +22,14 @@ mlruns_local/
 # Artifacts you don’t want in Git
 artifacts/
 
-# Node projects (if you keep frontend/)
-frontend/node_modules/
+# Node projects (not used but safe)
+frontend/
+
+# Local-only stuff
+backend/
+data/
+.env.local
+_check_versions.py
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
