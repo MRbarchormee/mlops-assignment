@@ -3,7 +3,6 @@ import io
 import datetime as _dt
 import pandas as pd
 import streamlit as st
-import pycaret as py
 from utils.model_loader import (
     load_yaml_config,
     load_model_from_cfg,
