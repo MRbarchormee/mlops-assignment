@@ -1,0 +1,22 @@
+# virtual env
+.venv/
+
+# caches & bytecode
+__pycache__/
+*.pyc
+
+# local logs / artifacts / DB
+*.log
+logs.log
+artifacts/
+mlflow.db
+mlruns_local/
+outputs/
+
+# local-only config
+.env.local
+
+# optional: raw data and scaffolds you don't want in this repo
+data/
+backend/
+frontend/
