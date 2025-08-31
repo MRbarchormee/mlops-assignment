@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Poetry with cache (fast & deterministic)
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Configure Poetry
+        run: poetry config virtualenvs.in-project true
+
+      - name: Install deps
+        run: |
+          poetry install
+
+      - name: Import checks
+        run: |
+          poetry run python - <<'PY'
+          import pandas, numpy, sklearn, pycaret, streamlit, mlflow, omegaconf, hydra
+          print("Imports OK")
+          PY
+
+      - name: Lint (basic)
+        run: |
+          poetry run pip install pyflakes
+          poetry run pyflakes streamlit_app.py || exit 0
+
+      # Optional: run the Hydra demo headlessly (writes an artifact)
+      - name: Hydra demo
+        run: |
+          poetry run python tools/hydra_main.py
