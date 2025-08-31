@@ -1,0 +1,4 @@
+suburb,rooms,type,method,date,distance,postcode,bedroom2,bathroom,car,land_size,building_area,year_built,council_area,region,property_count
+Richmond,3,h,S,2023-03-10,2.6,3121,3,2,1,192,111,1900,Yarra,Northern Metropolitan,14949
+Fitzroy,2,u,SP,2023-05-20,3.1,3065,2,1,0,85,60,1975,Moreland,Northern Metropolitan,8000
+Carlton,4,h,S,2023-07-01,1.9,3053,4,2,2,250,140,1920,Melbourne,Northern Metropolitan,12000
