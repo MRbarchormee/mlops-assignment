@@ -1,0 +1,8 @@
+backend:
+  use_mlflow: false
+  # For local PyCaret pipeline, pass the *stem* (no .pkl extension)
+  model_stem: models/melbourne_housing_pipeline
+
+mlflow:
+  tracking_uri: http://127.0.0.1:5000
+  run_id: ""   # leave empty; you can toggle MLflow in the UI sidebar

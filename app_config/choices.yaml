@@ -1,0 +1,20 @@
+categorical:
+  suburb: ["Richmond", "Fitzroy", "Brunswick", "St Kilda", "Carlton", "Hawthorn"]
+  type:   ["h", "u", "t"]   # h=house, u=unit, t=townhouse
+  method: ["S", "SP", "PI", "VB", "PN"]  # sale methods
+  council_area: ["Yarra", "Moreland", "Port Phillip", "Stonnington", "Melbourne"]
+  region: ["Northern Metropolitan", "Southern Metropolitan", "Eastern Metropolitan", "Western Metropolitan"]
+
+numeric:
+  rooms:          {min: 1,    max: 10,    step: 1,   default: 3}
+  bedroom2:       {min: 0,    max: 10,    step: 1,   default: 3}
+  bathroom:       {min: 0,    max: 6,     step: 1,   default: 2}
+  car:            {min: 0,    max: 6,     step: 1,   default: 1}
+  distance:       {min: 0.0,  max: 50.0,  step: 0.1, default: 2.6}
+  land_size:      {min: 0,    max: 2000,  step: 1,   default: 192}
+  building_area:  {min: 0,    max: 1000,  step: 1,   default: 111}
+  year_built:     {min: 1850, max: 2025,  step: 1,   default: 1900}
+  property_count: {min: 0,    max: 100000,step: 1,   default: 14949}
+
+text:
+  postcode_default: "3121"
